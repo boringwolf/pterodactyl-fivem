@@ -1,4 +1,3 @@
-
 name: build fivem debian egg
 on:
   workflow_dispatch:
@@ -29,7 +28,7 @@ jobs:
         uses: docker/login-action@v2
         with:
           registry: ghcr.io
-          username: Luxxy-GF
+          username: boringwolf
           password: ${{ secrets.REGISTRY_TOKEN }}
       -
         name: Build and push
@@ -40,4 +39,4 @@ jobs:
           platforms: linux/amd64
           push: true
           tags: |
-            ghcr.io/luxxy-gf/pterodactyl-fivem:latest
+            ghcr.io/boringwolf/pterodactyl-fivem:latest
