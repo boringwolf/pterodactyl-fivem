@@ -7,6 +7,15 @@ BLUE='\033[0;34m'
 
 Text="${GREEN}[STARTUP]${NC}"
 
+
+# 印出 MariaDB 版本
+echo -e "${Text} ${BLUE}Checking MariaDB version...${NC}"
+mariadb --version
+
+# 啟動提示
+echo -e "${Text} ${BLUE}Starting FiveM setup...${NC}"
+
+
 echo -e "${Text} ${BLUE}Starting checks for all updates...${NC}"
 RELEASE_PAGE=$(curl -sSL https://runtime.fivem.net/artifacts/fivem/build_proot_linux/master/)
 CHANGELOGS_PAGE=$(curl -sSL https://changelogs-live.fivem.net/api/changelog/versions/linux/server)
